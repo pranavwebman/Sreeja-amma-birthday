@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Amma 💐</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #f7cac9, #f9f5f0);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff4d6d;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transition: transform 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 1.1em;
+      background: #ff6f61;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff4d6d;
+    }
+
+    #message {
+      margin-top: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+      font-size: 1.2em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    #message.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Amma! 🎉</h1>
+
+    <!-- Replace the src URL with your imgbb-hosted photo of your mom -->
+    <img src="<a href="https://ibb.co/Rt9dQ6B"><img src="https://i.ibb.co/rqmN5pc/Scan-04-Apr-25-16-40-06-17437650532451.jpg" alt="Scan-04-Apr-25-16-40-06-17437650532451" border="0"></a>" alt="Mom's Photo" />
+
+    <br>
+    <button onclick="playSongAndShow()">എന്നെ ഒന്ന് ക്ലിക്ക് ചെയ്യുവോ....🎶</button>
+
+    <audio id="birthdayAudio">
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div id="message">
+      <p>
+        Dear Amma,<br><br>
+        On this beautiful day, I want to tell you how special you are to me. You’ve been my strength, my guide, my sunshine, and my everything. Your love is my superpower 💖<br><br>
+        Wishing you all the happiness in the world. May your smile stay forever, just like your love in my heart.<br><br>
+        With all my love,<br>
+        Your son, Pranav 🌸
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function playSongAndShow() {
+      const audio = document.getElementById("birthdayAudio");
+      const message = document.getElementById("message");
+
+      audio.play();
+      message.classList.add("visible");
+    }
+  </script>
+</body>
+</html>
